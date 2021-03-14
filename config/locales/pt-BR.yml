@@ -1,0 +1,33 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+  spree:
+    new_user_role: Novo Perfil
+    back_to_roles_list: Voltar para listagem de Perfis
+    permissions: Permissões
+    user_roles: Perfis
+    editing_user_role: Editando Perfil de Usuário
+    display_permissions: Permissão de Visualizar
+    management_permissions: Permissão de Gerenciar
+    admin:
+      tab:
+        roles: Perfis
+      permissions:
+        configuration_display: Visualização de configurações
+        configuration_management: Gerenciamento de configurações
+        dashboard_display: Visualização de Painel de exibição
+        order_display: Visualização de Pedidos
+        order_management: Gerenciamento de Pedidos
+        product_display: Visualização de Produtos
+        product_management: Gerenciamento de Produtos
+        promotion_display: Visualização de Promoções
+        promotion_management: Gerenciamento de Promoções
+        report_display: Visualização de Relatórios
+        restricted_stock_display: Visualização de Estoque Restrito
+        restricted_stock_management: Gerenciamento de Estoque Restrito
+        stock_display: Visualização de Estoque
+        stock_management: Gerenciamento de Estoque
+        user_display: Visualização de Usuários
+        user_management: Gerenciamento de Usuários

@@ -14,7 +14,13 @@ module SolidusUserRoles
       end
 
       def permission_sets_constantized
-        permission_sets.map(&:set).map(&:constantize)
+        permission_sets.map(&:set).map { |set_class_name|
+          begin
+            set_class_name.constantize
+          rescue NameError
+            nil
+          end
+        }.compact
       end
 
       def assign_permissions

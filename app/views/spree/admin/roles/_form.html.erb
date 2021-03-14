@@ -15,28 +15,32 @@
 
       <div class="alpha sixteen columns">
         <div data-hook="name" class="field">
-          <%= f.label :name, Spree.t(:name) %>
+          <%= f.label :name, I18n.t(:name, scope: :spree) %>
           <%= f.text_field :name, :class => 'fullwidth' %>
         </div>
       </div>
       <div class="alpha eight columns">
-        <%= label_tag nil, Spree.t(:display_permissions) %>
+        <%= label_tag nil, I18n.t(:display_permissions, scope: :spree) %>
         <ul>
           <% Spree::PermissionSet.display_permissions.each do |permission| %>
             <li>
-              <%= check_box_tag 'role[permission_set_ids][]', permission.id, f.object.try(:permission_sets).include?(permission) %>
-              <strong><%= permission.name %></strong>
+              <label>
+                <%= check_box_tag 'role[permission_set_ids][]', permission.id, f.object.try(:permission_sets).include?(permission) %>
+                <strong><%= t("spree.admin.permissions.#{permission.name.underscore}") %></strong>
+              </label>
             </li>
           <% end %>
         </ul>
       </div>
       <div class="omega eight columns">
-        <%= label_tag nil, Spree.t(:management_permissions) %>
+        <%= label_tag nil, I18n.t(:management_permissions, scope: :spree) %>
         <ul>
           <% Spree::PermissionSet.management_permissions.each do |permission| %>
             <li>
-              <%= check_box_tag 'role[permission_set_ids][]', permission.id, f.object.try(:permission_sets).include?(permission) %>
-              <strong><%= permission.name %></strong>
+              <label>
+                <%= check_box_tag 'role[permission_set_ids][]', permission.id, f.object.try(:permission_sets).include?(permission) %>
+                <strong><%= t("spree.admin.permissions.#{permission.name.underscore}") %></strong>
+              </label>
             </li>
           <% end %>
         </ul>
