@@ -1,7 +1,7 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
-en:
+---
+pt-BR:
   hello: "Hello world"
   spree:
     new_user_role: Novo Perfil
@@ -31,3 +31,4 @@ en:
         stock_management: Gerenciamento de Estoque
         user_display: Visualização de Usuários
         user_management: Gerenciamento de Usuários
+        subscription_management: Gerenciamento de Assinaturas
